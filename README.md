@@ -2,10 +2,10 @@
 
 These are the LaTeX files for my résumé and curriculum vitae (cv).
 
-If you want to modify them, you first need to install [LaTeX.](https://linuxconfig.org/how-to-install-latex-on-ubuntu-20-04-focal-fossa-linux)
-Then simply run the shell scripts:
+If you want to modify them, you first need to install [LaTeX](https://linuxconfig.org/how-to-install-latex-on-ubuntu-22-04-jammy-jellyfish-linux):
 
 ```console
+sudo apt install texlive-latex-extra
 ./main_cv.sh
 ./main_resume.sh
 ```
@@ -20,6 +20,6 @@ helping me a lot with all sorts of matters, including lending a heater to ease a
 
 ## Observation
 
-The LaTeX+TikZ+Beamer way of writing documents is very solid, but also tedious. It is better to be less pedantic and write directly in Markdown. It is good enough, instant publishing with github, Google fonts, can easily update and remove things, no paywalls, better search, diagramming via Mermaid. The world is changing: arXiv/Hal or just github, [Alexandra Elbakyan](https://en.wikipedia.org/wiki/Alexandra_Elbakyan).
+The LaTeX+TikZ+Beamer way of writing documents is very solid, but also tedious. It is better to be less pedantic and write directly in Markdown. It is good enough, almost instant publishing with github, Google fonts, can easily update and remove things, no paywalls, better search, diagramming via Mermaid. The world is changing: arXiv/Hal or just github, [Alexandra Elbakyan](https://en.wikipedia.org/wiki/Alexandra_Elbakyan)...
 
-[reStructuredText?](https://eli.thegreenplace.net/2017/restructuredtext-vs-markdown-for-technical-documentation/), not worth it.
+[reStructuredText](https://eli.thegreenplace.net/2017/restructuredtext-vs-markdown-for-technical-documentation/)? Not worth it.
