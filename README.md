@@ -6,6 +6,7 @@ If you want to modify them, you first need to install [LaTeX](https://linuxconfi
 
 ```console
 sudo apt install texlive-latex-extra
+sudo apt install texlive-fonts-extra
 ./main_cv.sh
 ./main_resume.sh
 ```
