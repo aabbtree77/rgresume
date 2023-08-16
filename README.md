@@ -11,6 +11,8 @@ sudo apt install texlive-fonts-extra
 ./main_resume.sh
 ```
 
+This will take about 2GB of the HDD space.
+
 ## Acknowledgements
 
 I learned LaTeX in the years 1999-2008 mostly from D. Sc. Jorma Laaksonen who was my thesis instructor at Helsinki University of Technology (HUT, TKK, Aalto University), and I still used it heavily around 2012 and 2014.
@@ -20,6 +22,4 @@ helping me a lot with all sorts of matters, including lending a heater in winter
 
 ## Observation
 
-The LaTeX+TikZ+Beamer way of writing documents is very solid, but also tedious. It is better to be less pedantic and write directly in Markdown unless it is a math paper or a thesis. Markdown is good enough, instant publishing with github, Google fonts, can easily update and remove things, no paywalls, better search, diagramming via Mermaid. The world is changing: arXiv/Hal or just github, [Alexandra Elbakyan](https://en.wikipedia.org/wiki/Alexandra_Elbakyan)...
-
-[reStructuredText](https://eli.thegreenplace.net/2017/restructuredtext-vs-markdown-for-technical-documentation/)? Not worth it.
+The LaTeX+TikZ+Beamer way of writing documents is very solid, but also tedious. It is better to be less pedantic and write directly in Markdown unless it is a math paper or a thesis. Markdown is good enough, instant publishing with github, Google fonts, can easily update and remove things, no paywalls, better search (?), diagramming with Mermaid or [app.diagrams.net/](https://app.diagrams.net/).
