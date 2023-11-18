@@ -17,8 +17,7 @@ This will take about 2GB of the HDD space.
 
 I learned LaTeX in the years 1999-2008 mostly from D. Sc. Jorma Laaksonen who was my thesis instructor at Helsinki University of Technology (HUT, TKK, Aalto University), and I still used it heavily around 2012 and 2014.
 
-These particular shell scripts were given to me by ‪Davide Eynard. He was doing research at USI, Lugano and also 
-helping me a lot with all sorts of matters, including lending a heater in winter.
+The shell scripts were given to me by ‪Davide Eynard.
 
 ## Observation
 
