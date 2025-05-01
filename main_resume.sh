@@ -1,23 +1,23 @@
-latex rgresume.tex
+#!/usr/bin/env bash
+set -e
 
-latex rgresume.tex
+JOB=RamunasGirdziusasResume
+SRC=rgresume.tex
 
-latex rgresume.tex
+# 1) First XeLaTeX → .aux & .bcf
+xelatex -interaction=nonstopmode -jobname="$JOB" "$SRC"
 
-dvips -t a4 -Ppdf -G0 -o rgresume.ps rgresume.dvi
+# 2) Biber → .bbl
+#biber "$JOB"
 
-ps2pdf rgresume.ps
-ps2pdf -dPDFSETTINGS=/prepress \
-       -dCompatibilityLevel=1.3 \
-       -dAutoFilterColorImages=false \
-       -dAutoFilterGrayImages=false \
-       -dColorImageFilter=/FlateEncode \
-       -dGrayImageFilter=/FlateEncode \
-       -dMonoImageFilter=/FlateEncode \
-       -dDownsampleColorImages=false \
-       -dDownsampleGrayImages=false \
-       rgresume.ps RamunasGirdziusasResume.pdf
+# 3) Two more XeLaTeX passes
+xelatex -interaction=nonstopmode -jobname="$JOB" "$SRC"
+xelatex -interaction=nonstopmode -jobname="$JOB" "$SRC"
 
-rm  *.aux *.log *.out *.dvi *.ps
+# 4) Clean up intermediate files *and* .bbl
+latexmk -c -jobname="$JOB" "$SRC"
+rm -f "${JOB}.bbl" "${JOB}.bcf" "${JOB}.run.xml"
 
-evince RamunasGirdziusasResume.pdf
+# 5) Open the PDF
+evince "${JOB}.pdf" &
+

@@ -1,106 +1,101 @@
-%\documentclass[12pt]{article}
-\documentclass[a4paper,11pt]{article}
-\usepackage{natbib}
-\usepackage{bibentry}
-\nobibliography*
-%\usepackage{url}
-%\usepackage{hyperref}
-%\usepackage[backref=page,breaklinks=true,colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[a4paper,
+            left=1in,
+            right=1in,
+            top=1in,
+            bottom=1in
+           ]{geometry}
+           
+\usepackage{tabularx}
+\renewcommand{\arraystretch}{1.2}           
+
+%% 1) Load fontspec first
+\usepackage{fontspec}
+\setmainfont[
+  Path           = /usr/local/texlive/2025/texmf-dist/fonts/opentype/adobe/sourcecodepro/,
+  Extension      = .otf,
+  UprightFont    = *-Regular,
+  ItalicFont     = *-RegularIt,
+  BoldFont       = *-Bold,
+  BoldItalicFont = *-BoldIt,
+  Scale          = MatchLowercase,
+  %Scale          = 0.9,
+]{SourceCodePro}
+
 \usepackage[breaklinks=true,colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
-\usepackage{breakurl}
-\usepackage[top=1.5cm, bottom=1.5cm, left=1.5cm, right=1cm]{geometry}
-%\usepackage{inconsolata}
-\usepackage[default]{sourcecodepro}
-\usepackage[T1]{fontenc}
-%\usepackage[a4paper]{geometry}
-%\usepackage[T1]{fontenc}
+
+
 
 \begin{document}
 \thispagestyle{empty}
-%\begin{center}
-%\Large \textbf{R\'{e}sum\'{e}}
-%\\[1cm]
-%\end{center}
-%\small
-%\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%
 \begin{center}
 \begin{tabular}{ccc}
-&\Large \textbf{R\'{e}sum\'{e}}&\\
+&\Large \textbf{Résumé}&\\
 \\
-& Ram\={u}nas Girdziu\v{s}as &\\  
+& Ramūnas Girdziušas &\\  
 & Laisvės pr. 67-54, Vilnius, LT-07189 &\\
 & aabbtree77[at]gmail.com &\\
 & \url{https://aabbtree77.github.io/} &\\
-& \url{https://aabbtree77.github.io/cv/}
 \end{tabular}
 \end{center}
 %
 \section*{Education}
 %
-\begin{tabular}{ll}
-        DSc(2008)/Msc(2001) in Technology, Helsinki University of Technology. \\
-        BSc in Electrical Eng. (1999), Vilnius Gediminas Technical University. 
-\end{tabular}
+\begin{tabularx}{\textwidth}{@{}p{3cm}X@{}}
+1995 - 1999  & B.Sc. (E. Eng.), Vilnius Gediminas Technical University\\
+1999 - 2008  &  M.Sc., D.Sc. (Tech.), Helsinki University of Technology\\
+\end{tabularx}
 %
 \section*{Employment}
 %
-\begin{tabular}{ll}
-2014--Now: & Self-employed.\\
-           & \\
-2013--2014: & Faculty of Informatics at the University of Lugano,\\
-                        & Via Giuseppe Buffi 13, CH-6904 Lugano, Switzerland. \\
-&\\
-2011--2012: & DEMO, \'{E}cole Nationale Sup\'{e}rieure des Mines de Saint-\'{E}tienne,\\
-&158 cours Fauriel, 42023 Saint-\'Etienne, CEDEX2, France. \\
-&\\
-2008--2009: & Department of Neurobiology at the University of California,\\
-&Los Angeles, 73-235 CHS, CA 90095-1763. \\
-&\\
-2000--2008: & Faculty of Information and Natural Sciences at\\
-            & Helsinki University of Technology,\\ 
-&  P.O.Box 5400 (Konemiehentie 2), FI-02015, Finland. \\
-\end{tabular}
+\begin{tabularx}{\textwidth}{@{}p{3cm}X@{}}
+2014 - Now & Self-Funded \\
+
+2013 - 2014 &
+Faculty of Informatics at the University of Lugano\\
+
+2011 - 2012 &
+École Nationale Supérieure des Mines de Saint-Étienne\\
+
+2008 - 2009 &
+Dep. of Neurobiology at the University of California, LA \\
+
+2000 - 2008 &
+Dep. of Comp. Sc. at Helsinki University of Technology\\
+\end{tabularx}
+
 \section*{Selected Projects}
 \label{sect:pubs}
 
-\begin{tabular}{ll}
+\begin{tabularx}{\textwidth}{@{}p{3cm}X@{}}
 
 \href{https://github.com/aabbtree77/law2}{lawtrust.eu} & Created a website for a lawyer who speaks 9 languages.\\
-               2024    & HTML, Tailwind CSS, Js, Go, porkbun.com, github pages.\\
+               2024    & HTML, Tailwind CSS, Js, Go, porkbun.com, github pages\\
                        &\\
 \href{https://github.com/aabbtree77/esp32-vpn}{esp32-vpn} & Connected the ESP32 globally without 3rd party services.\\
-               2023    & IoT, VPN, P2P, MQTT, SSH, Wi-Fi, 24/7, MicroPython, Go.\\
+               2023    & IoT, VPN, P2P, MQTT, SSH, Wi-Fi, 24/7, MicroPython, Go\\
                        &\\
 \href{https://github.com/aabbtree77/twinpeekz2}{twinpeekz2}    & Implemented a real-time multi-pass 3D rendering pipeline.\\
-                   2022       & GLFW, GLTF, OpenGL/GLSL, RenderDoc, 3D ray marching, Nim.\\
+                   2022       & GLFW, GLTF, OpenGL/GLSL, RenderDoc, 3D ray marching, Nim\\
                           &\\
 \href{https://github.com/aabbtree77/adast}{adast} & Wrote and maintained firmware for a factory machine. \\
-2020 - 2024 & Adast Maxima MS80, paper guillotine, avr-gcc, ATmega16. \\
+2020 - 2024 & Adast Maxima MS80, paper guillotine, avr-gcc, ATmega16 \\
      &\\                        
 \href{https://hal.archives-ouvertes.fr/hal-00723427}{hal-00723427} & Sped up Monte Carlo integration in a complex eng. project.\\
-                     2012 & Fluid dynamics, Bayesian optimization, ProActive PACA Grid.\\
+                     2012 & Fluid dynamics, Bayesian opt., ProActive PACA Grid\\
                           &  \\        
-\end{tabular}
+\end{tabularx}
 
-%
-
-
-%
 %
 \section*{Awards}
 %
-\begin{tabular}{ll}
-        2008: & Doctoral thesis award: “Pass with Distinction”.\\
-        2008: & Invited talk (Prof. Mads Nielsen, the University of Copenhagen)\\
-        2002--2006:& ComMIT grant (postgraduate studies).\\
-        1999--2000:& Nokia scholarship (Natalia Kantola, Robertas Tamulevi\v{c}ius).
-\end{tabular}
-%
-%
-\bibliographystyle{plain}
-\nobibliography{rg}
+\begin{tabularx}{\textwidth}{@{}p{3cm}X@{}}
+        2008 & Doctoral thesis award: “Pass with Distinction”\\
+        1999 - 2000 & Nokia scholarship
+\end{tabularx}
+
 \end{document}

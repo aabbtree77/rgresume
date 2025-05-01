@@ -1,25 +1,23 @@
-latex rgcv.tex
+#!/usr/bin/env bash
+set -e
 
-bibtex rgcv
+JOB=RamunasGirdziusasCV
+SRC=rgcv.tex
 
-latex rgcv.tex
+# 1) First XeLaTeX → .aux & .bcf
+xelatex -interaction=nonstopmode -jobname="$JOB" "$SRC"
 
-latex rgcv.tex
+# 2) Biber → .bbl
+biber "$JOB"
 
-dvips -t a4 -Ppdf -G0 -o rgcv.ps rgcv.dvi
+# 3) Two more XeLaTeX passes
+xelatex -interaction=nonstopmode -jobname="$JOB" "$SRC"
+xelatex -interaction=nonstopmode -jobname="$JOB" "$SRC"
 
-ps2pdf rgcv.ps
-ps2pdf -dPDFSETTINGS=/prepress \
-       -dCompatibilityLevel=1.3 \
-       -dAutoFilterColorImages=false \
-       -dAutoFilterGrayImages=false \
-       -dColorImageFilter=/FlateEncode \
-       -dGrayImageFilter=/FlateEncode \
-       -dMonoImageFilter=/FlateEncode \
-       -dDownsampleColorImages=false \
-       -dDownsampleGrayImages=false \
-       rgcv.ps RamunasGirdziusasCV.pdf
+# 4) Clean up intermediate files *and* .bbl
+latexmk -c -jobname="$JOB" "$SRC"
+rm -f "${JOB}.bbl" "${JOB}.bcf" "${JOB}.run.xml"
 
-rm  *.aux *.log *.bbl *.blg *.out *.dvi *.ps
+# 5) Open the PDF
+evince "${JOB}.pdf" &
 
-evince RamunasGirdziusasCV.pdf
