@@ -1,3 +1,7 @@
+>"True automatic detection of a “soft wrap” in TeX and insertion of a leading “│” on every continuation line is essentially impossible in standard LaTeX. TeX doesn’t expose its line-breaking decisions at the macro level, so there’s no hook you can attach to say “when you wrap here, insert a symbol.” Any solution that pretends to do that is already doing its own wrapping under the hood."
+>
+> \- ChatGPT, May 5, 2025
+
 ## Introduction
 
 These are the LaTeX files for my résumé and curriculum vitae (cv).
@@ -142,8 +146,4 @@ The July 17 2024 commit "Evgenia Berkovich and Svetlana Petrijchuk" corresponds 
 The latest commit "major revamp" (April 30, 2025) uses the modern way: XeLaTeX with biber, via ChatGPT, mostly. This is a fully automated layout with text inside .tex, .bib and urls properly wrapping or splitting, which is the problem that will hardly ever be solved perfectly.
 
 ChatGPT, DeepSeek, and Grok are enormously helpful. I cannot imagine myself doing LaTeX macros and endless improvements without the AI.
-
->"True automatic detection of a “soft wrap” in TeX and insertion of a leading “│” on every continuation line is essentially impossible in standard LaTeX. TeX doesn’t expose its line-breaking decisions at the macro level, so there’s no hook you can attach to say “when you wrap here, insert a symbol.” Any solution that pretends to do that is already doing its own wrapping under the hood."
->
-> - ChatGPT, May 5, 2025
 
