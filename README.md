@@ -2,11 +2,20 @@
 >
 > \- ChatGPT, May 5, 2025
 
+<table align="center">
+    <tr>
+    <th align="center">Mamma Mia!</th>
+    </tr>
+    <tr>
+    <td>
+    <img src="./images/merylstreep2008.jpg"  alt="Meryl Streep in the bedroom jump scene, Mamma Mia! (2008)" width="100%" >
+    </td>
+    </tr>
+</table>
+
 ## Introduction
 
-These are the LaTeX files for my résumé and curriculum vitae (cv).
-
-They could be useful for someone having text with a lot of links (urls). The LaTeX code includes macros needed to break/wrap urls and do the same with urls inside .bib refs. This problem is tricky, just like in the HTML/CSS domain. The code hides the protocol part (`http://` and `https://`) while preserving the url. One can also see how to use nonstandard fonts.
+The LaTeX files for my résumé and curriculum vitae (cv). They solve the problem of text with a lot of links (urls). The LaTeX code includes macros needed to break/wrap urls and do the same with urls inside .bib refs. The code hides the protocol part (`http://` and `https://`) while preserving the url. One can also see how to use nonstandard fonts.
 
 To modify LaTeX, install XeLaTeX (Ubuntu 22.04). This is more arduous than expected due to Ubuntu/Debian meta-packages pulling in a broken ConTeXt format builder. One needs to resort to official TeX Live’s tlmgr with a custom profile as ChatGPT shows after a few iterations by trial and error.
 
