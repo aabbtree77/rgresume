@@ -173,6 +173,14 @@
 \usepackage{comment}
 % (\begin{comment}...\end{comment})
 
+%Do not start new paragraphs with extra space
+\setlength{\parindent}{0pt}
+\newcommand{\projecturl}[1]{%
+  \par\smallskip
+  \murl{#1}
+  \par\medskip
+}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -193,10 +201,100 @@
 \section{Education}
 %
 \begin{tabularx}{\textwidth}{@{}p{3cm}X@{}}
-1995-1999  & BSc (EE), Vilnius Gediminas Technical University\\
-1999-2008  &  MSc (Tech), DSc (Tech), Helsinki University of Technology\\
+1995-1999:  & BSc (EE), Vilnius Gediminas Technical University.\\
+1999-2008:  &  MSc (Tech), DSc (Tech), Helsinki University of Technology.\\
 \end{tabularx}
 %
+
+
+\section{Programming Experience (Portfolio)}
+
+\subsection{Web (Full Stack)}
+
+Tools: VPS, ssh, Linux, Porkbun, Go, React, Postgres, SQLite, sqlc, Makefile, Dockerfile, docker-compose.yml, Tailwind, Excalidraw, Mermaid. Also tried: MongoDB Atlas, render.com, MaxMind Geolocation, MERN, Drizzle ORM, Astro.
+
+\subsubsection{Example Project: initials.dev (2026)}
+
+\projecturl{https://initials.dev}
+
+\projecturl{https://github.com/aabbtree77/initialsdb}
+
+A public bulletin board which removes registrations, ads, censorship, and fights bots with proof of work and rate limiters.
+Designed and open sourced backend, frontend, and the VPS infrastructure.
+
+\subsubsection{Other Projects}
+
+\begin{itemize}
+\item \murl{https://github.com/aabbtree77/law2}
+\item \murl{https://github.com/aabbtree77/miniguestlog}         
+\item \murl{https://github.com/aabbtree77/schatzhauser}
+\end{itemize}
+
+\subsection{Embedded Development}
+
+Tools: ATmega, avr-gcc, ESP32, Ubuntu, routers, MQTT, I2C, libp2p. Wrote firmware for industrial machines (poster printers, box cutters, gym equipment), ensured global device connectivity.
+
+\subsubsection{Example Project: Adast Maxima MS80 (2020 - 2026)}
+
+\projecturl{https://github.com/aabbtree77/adast}
+
+Rewrote firmware (C, avr-gcc) for the paper cutting machine, ensuring correctness and precision under heavy factory workloads, with some updates throughout the years. The machine is still in use today (2026).
+
+\subsubsection{Other Projects}
+
+\begin{itemize}
+  \item \murl{https://github.com/aabbtree77/atmega8-ssd1306-ds18b20-dht22}
+  \item  \murl{https://github.com/aabbtree77/digispark-attiny85-command-line}
+  \item \murl{https://github.com/aabbtree77/esp32-vpn}
+\end{itemize}
+
+\subsection{3D}
+
+Tools: OpenGL, GLSL, C++, Nim, Go, Blender, GLFW, GLTF, GTX 760. OpenFOAM, ParaView, ProActive PACA Grid (INRIA). Shape analysis (MDS, geodesics).
+
+\subsubsection{Example Project 1: Volumetric Lighting}
+
+\projecturl{https://github.com/aabbtree77/twinpeekz}
+
+A complete rendering pipeline with one of the most beautiful special effects - volumetric lighting.
+
+\subsubsection{Example Project 2: Automotive Optimization}
+
+\projecturl{http://hal.archives-ouvertes.fr/hal-00723427}
+
+A large-scale engineering optimization project involving Navier–Stokes simulations, grid computing, meta-optimization, kriging, Bayesian methods, and Monte Carlo analysis, executed end-to-end on cloud infrastructure in collaboration with academic and industrial partners.
+
+\subsubsection{Other Projects}
+
+\begin{itemize}
+  \item \murl{https://github.com/aabbtree77/twinpeekz2}
+  \item \murl{https://github.com/go-gl/gl/issues/128}
+  \item \murl{https://github.com/aabbtree77/chateaudanet}
+  \item \murl{https://diglib.eg.org/handle/10.2312/3dor.20141044.009-015}
+  \item \murl{https://github.com/doitsujin/dxvk/issues/3789}
+  \item \murl{https://github.com/Max1412/Graphics2/issues/24}
+  \item \murl{https://github.com/godlikepanos/anki-3d-engine/issues/59}
+\end{itemize}
+
+\subsection{Data Analysis}
+
+Tools: Matlab, Scilab, Python. Kriging, Bayes, CMA-ES.   
+
+\subsubsection{Example Project: MNIST Digits}
+
+\projecturl{https://github.com/aabbtree77/MNIST-0.17}
+
+This repo contains two world records in the MNIST digit recognition competition. One is by me within classics (log-Gabors with max pooling and kriging) - 0.29\%, and the other is a confirmed absolute world record with deep learning by Jonas Matuzas - 0.17\%. 
+
+\subsubsection{Other Projects}
+
+\begin{itemize}
+  \item \murl{https://github.com/aabbtree77/imdb-sqlite-queries}
+  \item \murl{https://github.com/aabbtree77/uci-marketing-analysis-cart}
+  \item  \murl{https://aabbtree77.github.io/tensors}
+  \item \murl{https://github.com/polydojo/jispy/issues/1}
+\end{itemize}
+
 \section{Employment}
 %
 \begin{tabularx}{\textwidth}{@{}p{3cm}X@{}}
@@ -283,66 +381,19 @@ Email: bronius@mituvele.lt, phone: +370 686 43642.
 
 \end{itemize}
 %
-\section{Code}
-\begin{tabularx}{\textwidth}{@{}p{3cm}>{\raggedright\arraybackslash}X@{}}
-C, avr-gcc      &
-  \murl{https://github.com/aabbtree77/adast}\\
-                &
-  \murl{https://github.com/aabbtree77/atmega8-ssd1306-ds18b20-dht22}\\
-                &
-  \murl{https://github.com/aabbtree77/digispark-attiny85-command-line}\\[0.5ex]
 
-Go, Python      &
-  \murl{https://github.com/aabbtree77/esp32-vpn}\\
-                &
-  \murl{https://github.com/aabbtree77/MNIST-0.17} (fork)\\[0.5ex]
-
-Go, Nim, cpp11  &   
-  \murl{https://github.com/aabbtree77/twinpeekz2}\\
-                &
-  \murl{https://github.com/aabbtree77/premaxwell}\\[0.5ex]
-
-MERN            &
-  \murl{https://github.com/aabbtree77/aabbtree77.github.io}\\
-                &  
-  \murl{https://github.com/aabbtree77/law2}\\
-                &
-  \murl{https://github.com/aabbtree77/miniguestlog}\\  
-                &
-  \murl{https://github.com/aabbtree77/auth-starter-frontend}\\
-                &
-  \murl{https://github.com/aabbtree77/auth-starter-backend}\\[0.5ex]
-
-SQLite          &
-  \murl{https://github.com/aabbtree77/schatzhauser}\\
-                &
-  \murl{https://github.com/aabbtree77/imdb-sqlite-queries}\\[0.5ex]
-  
-LaTeX           & 
-  \murl{https://aabbtree77.github.io/tensors}
-\end{tabularx}
-
-%
-\section{Bug Fixes}
-\begin{tabularx}{\textwidth}{@{}p{3cm}>{\raggedright\arraybackslash}X@{}}
-Cross-Compilation & \murl{https://github.com/Max1412/Graphics2/issues/24}\\
-OpenGL & \murl{https://github.com/go-gl/gl/issues/128}\\
-Screen Tearing & \murl{https://github.com/godlikepanos/anki-3d-engine/issues/59}\\
-Deep Copying & \murl{https://github.com/polydojo/jispy/issues/1}\\
-Wine vs dxvk & \murl{https://github.com/doitsujin/dxvk/issues/3789}\\
-\end{tabularx}
 
 %
 \section{Additional Information}
 %
 \begin{tabularx}{\textwidth}{@{}p{3cm}>{\raggedright\arraybackslash}X@{}}
-		Date of Birth & 30.12.1977 (Gen X, He/Him)\\
-		Citizenship & Lithuanian (Lithuania, European Union)\\
-        Languages & English (7/10), Russian (8/10), Lithuanian (9/10)\\
-        Driver's Licence & B\\
-        Sports & 2318 (hyperboloid777 @ lichess), Kyokushin 2nd belt (1993)\\
-        Erdős Number & 5 (Bollobas, Mannila, Bingham, Oja), 4 (Odlyzko, Guibas, Bronstein)\\
-   Favorite Art & The Cold Heart (1827), \textrussian{Бесы (1872)}, The Last Leaf (1905), \textlithuanian{Balta drobulė (1958)}, Le jouet (1976), \textrussian{Девочка и дельфин (1979)}, Marie Baie des Anges (1997)         
+		Date of Birth: & 30.12.1977 (Gen X, He/Him).\\
+		Citizenship: & Lithuanian (Lithuania, European Union).\\
+        Languages: & English (7/10), Russian (8/10), Lithuanian (9/10).\\
+        Driver's Licence: & B.\\
+        Sports: & 2318 (hyperboloid777 @ lichess), Kyokushin 2nd belt (1993).\\
+        Erdős Number: & 5 (Bollobas, Mannila, Bingham, Oja), 4 (Odlyzko, Guibas, Bronstein).\\
+   Hobbies: & Classical and modern cinema.         
 \end{tabularx}
 %
 
